@@ -66,7 +66,7 @@ class Client:
         # Request/response headers
         self.headers = {
             'Authorization': 'Bearer {}'.format(token),
-            'User-Agent': 'brawlstats/{0} (Python {1[0]}.{1[1]})'.format(self.api.VERSION, sys.version_info),
+            'User-Agent': 'rf0x3d/brawlstats/{0} (Python {1[0]}.{1[1]})'.format(self.api.VERSION, sys.version_info),
             'Accept-Encoding': 'gzip'
         }
 
