@@ -31,7 +31,7 @@ class API:
 
 def bstag(tag):
     tag = tag.strip('#').upper().replace('O', '0')
-    allowed = '0289PYLQGRJCUV'
+    allowed = '0289PYLQGRJCUV%3'  # hack
 
     if len(tag) < 3:
         raise NotFoundError(404, reason='Tag less than 3 characters.')
