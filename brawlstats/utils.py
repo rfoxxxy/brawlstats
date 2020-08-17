@@ -35,8 +35,11 @@ def bstag(tag):
 
     if len(tag) < 3:
         raise NotFoundError(404, reason='Tag less than 3 characters.')
-    invalid = [c for c in tag if c not in allowed]
-    if invalid:
+    invalid = []
+    for char in list(tag):
+        if char not in allowed:
+            invalid.append(char)
+    if len(invalid) > 0:
         raise NotFoundError(404, invalid_chars=invalid)
 
     if not tag.startswith('%23'):
